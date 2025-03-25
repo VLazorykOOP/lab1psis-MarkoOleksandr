@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Про нас</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Ласкаво просимо у світ подорожей!</h1>
+ <button id="musicBtn">▶</button>
+  <audio id="bgMusic" src="audio/music.mp3"></audio>
+
+  </header>
+
+  <nav>
+    <a href="index.html">Головна</a>
+    <a href="about.html">Про нас</a>
+    <a href="contact.html">Контакти</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Про нас</h2>
+      <p>Ми — команда мандрівників, які прагнуть відкрити для вас світ з нової сторони.</p>
+      <p>Наша місія — надихати людей на подорожі, відкривати нові культури, пейзажі та знаходити незабутні пригоди.</p>
+      <img src="images/team.jpg" alt="Наша команда" class="landscape">
+      <p>З нами ваші подорожі стануть яскравішими та цікавішими!</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Світ Подорожей</p>
+  </footer>
+</body>
+
+<script>
+  const music = document.getElementById('bgMusic');
+  const musicBtn = document.getElementById('musicBtn');
+  let isPlaying = false;
+  music.volume = 0.2; 
+
+  musicBtn.addEventListener('click', () => {
+    if (!isPlaying) {
+      music.play();
+      musicBtn.textContent = '⏸';
+      isPlaying = true;
+    } else {
+      music.pause();
+      musicBtn.textContent = '▶';
+      isPlaying = false;
+    }
+  });
+</script>
+
+</html>

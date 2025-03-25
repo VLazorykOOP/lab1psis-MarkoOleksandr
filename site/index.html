@@ -1,0 +1,76 @@
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Подорожі світом</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+  <header>
+    <h1>Ласкаво просимо у світ подорожей!</h1>
+  <button id="musicBtn">▶</button>
+  <audio id="bgMusic" src="audio/music.mp3"></audio>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="about.html">Про нас</a>
+      <a href="contact.html">Контакти</a>
+    </nav>
+  </header>
+
+  <main>
+<section>
+  <h2>Відкривай нові горизонти</h2>
+  <img src="images/travel.jpeg" alt="Подорожі світом" class="main-image">
+  <p>Подорожі відкривають перед нами дивовижні місця, нові культури та незабутні враження.</p>
+</section>
+
+<section class="image-section">
+  <h2>Наша мандрівка</h2>
+  <img src="images/landscape.jpeg" alt="Краєвид подорожі" class="landscape">
+  <p>Пейзажі, які вражають та залишають спогади назавжди.</p>
+</section>
+
+<section class="image-section">
+  <h2>Наша пригода</h2>
+  <img src="images/manonarock.jpeg" alt="Подорож у гори" class="landscape">
+  <p>Вид, який відкривається лише тим, хто не боїться піднятись вище.</p>
+</section>
+
+<section>
+  <h2>Чому варто подорожувати?</h2>
+  <ul class="travel-list">
+    <li>Знайомство з різними культурами</li>
+    <li>Нові друзі та знайомства</li>
+    <li>Яскраві спогади на все життя</li>
+  </ul>
+</section>
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Світ Подорожей</p>
+  </footer>
+
+<script>
+  const music = document.getElementById('bgMusic');
+  const musicBtn = document.getElementById('musicBtn');
+  let isPlaying = false;
+  music.volume = 0.2; 
+
+
+  musicBtn.addEventListener('click', () => {
+    if (!isPlaying) {
+      music.play();
+      musicBtn.textContent = '⏸';
+      isPlaying = true;
+    } else {
+      music.pause();
+      musicBtn.textContent = '▶';
+      isPlaying = false;
+    }
+  });
+</script>
+</body>
+</html>
